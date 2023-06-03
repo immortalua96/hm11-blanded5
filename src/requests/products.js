@@ -18,3 +18,12 @@ export async function getOneProductById(id) {
     console.log(error);
   }
 }
+
+export async function addProduct(product) {
+  try {
+    const response = await instance.post("/products/add",product);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+} 

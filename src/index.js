@@ -4,6 +4,7 @@ import { getProducts } from "./requests/products";
 import { refs } from "./refs";
 import { createProductsMarkup } from "./services/markupService";
 import { onSingleProductFormSubmit } from "./on_single_product_form_submit";
+import { addSingleProductForm } from "./OnAddSingleProductForm";
 
 async function renderProducts() {
   try {
@@ -17,3 +18,4 @@ async function renderProducts() {
 // renderProducts();
 
 refs.singleProductForm.addEventListener("submit", onSingleProductFormSubmit);
+refs.addSingleProductForm.addEventListener("submit", addSingleProductForm);
